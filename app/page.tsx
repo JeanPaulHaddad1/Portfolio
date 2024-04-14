@@ -1,113 +1,232 @@
 import Image from "next/image";
+import Skills from "./Skills";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div className="bg-darkgray">
+      <div className="flex flex-col items-center">
+        <h1 className="text-4xl font-bold text-center text-mainColor ">
+          Hello, I am Jean-Paul
+        </h1>
+        <p className="text-base mt-2 text-white">Full stack developer</p>
+        <a
+  href="/Resume.pdf" // Replace with the actual path to your PDF
+  target="_blank" // Opens in a new tab
+  className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-xs sm:text-sm md:text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300"
+>
+  <svg
+    className="mr-2 -ml-1 w-4 h-4"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    aria-hidden="true"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+  My Resume
+</a>
+
+        <input type="button" placeholder="Resume" className="mt-2" />
+      </div>
+
+      <div className="flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center my-4 text-mainColor">
+          Education
+        </h2>
+        <div className="w-11/12 bg-gray-100 p-4 rounded-lg shadow-md">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center bg-black text-orange-500 rounded-lg px-3 py-1">
+              <svg
+                className="h-5 w-5 mr-2 text-orange-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 011-1h6a1 1 0 110 2h-1v1a1 1 0 11-2 0V3H7v1a1 1 0 11-2 0V3H6a1 1 0 01-1-1zM4 6a1 1 0 000 2h12a1 1 0 100-2H4zm1 4a1 1 0 011-1h10a1 1 0 110 2H6a1 1 0 01-1-1zm-1 3a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              2021-2024
+            </div>
+            <div className="flex-1 text-right">Graduation</div>
+          </div>
+          <div className="flex flex-col mb-4">
+            <div className="flex items-center bg-black text-orange-500 rounded-lg px-3 py-1 mb-2">
+              <svg
+                className="h-5 w-5 mr-2 text-orange-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 011-1h6a1 1 0 110 2h-1v1a1 1 0 11-2 0V3H7v1a1 1 0 11-2 0V3H6a1 1 0 01-1-1zM4 6a1 1 0 000 2h12a1 1 0 100-2H4zm1 4a1 1 0 011-1h10a1 1 0 110 2H6a1 1 0 01-1-1zm-1 3a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              {"Bachelor's Degree"}
+            </div>
+            <div className="font-bold text-xl">
+              Bachelor in Computer Science
+            </div>
+          </div>
+          <div className="flex items-center mb-2">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/logos/ua-logo.png"
+              alt="University"
+              width={32}
+              height={32}
+              className="rounded-full mr-2"
             />
-          </a>
+            <div>Anthonine University</div>
+          </div>
+          <div className="flex items-center">
+            <Image
+              src="/logos/location-logo.png"
+              alt="Location"
+              width={32}
+              height={32}
+              className="rounded-full mr-2"
+            />
+            <div>Baabda, Lebanon</div>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center my-4 text-mainColor">
+          Experience
+        </h2>
+        <div className="w-11/12 bg-gray-100 p-4 rounded-lg shadow-md">
+          <div className="flex justify-between items-center mb-4">
+            <div className="flex items-center bg-black text-orange-500 rounded-lg px-3 py-1">
+              <h3 className="text-lg font-bold text-orange-500">
+                “@Sams” Computer Repairs
+              </h3>
+            </div>
+            <p className="bg-black text-orange-500 rounded-lg px-3 py-1 text-sm">
+              Jun 2018 – Present
+            </p>
+          </div>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              Diagnosed and resolved hardware and software issues for various
+              computer systems.
+            </li>
+            <li>
+              Conducted in-depth troubleshooting to identify root causes of
+              technical problems.
+            </li>
+            <li>Installed new hardware into computers.</li>
+            <li>
+              Communicated technical solutions to non-technical customers in a
+              clear and understandable manner.
+            </li>
+            <li>
+              Repaired and upgraded computer hardware components, including
+              motherboards, processors, VGAs, and RAMs.
+            </li>
+            <li>Managed inventory of computer components and peripherals.</li>
+            <li>
+              Demonstrated effective time management skills in handling multiple
+              repair tasks simultaneously.
+            </li>
+            <li>
+              Met or exceeded repair deadlines to ensure timely delivery of
+              services to clients.
+            </li>
+          </ul>
+        </div>
+
+        <div className="w-11/12 bg-gray-100 p-4 mt-6 rounded-lg shadow-md">
+          <div className="flex justify-between items-center mb-4">
+            <div className="flex items-center bg-black text-orange-500 rounded-lg px-3 py-1">
+              <h3 className="text-lg font-bold text-orange-500">
+                Freelance Developer
+              </h3>
+            </div>
+            <p className="bg-black text-orange-500 rounded-lg px-3 py-1 text-sm">
+              April 2022 – Present
+            </p>
+          </div>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              Developed web applications utilizing C#, ASP.NET, and MVC
+              frameworks, focusing on backend processes and user experience
+              improvements.
+            </li>
+            <li>
+              Designed and implemented dynamic and responsive mobile
+              applications using React-Native, achieving cross-platform
+              functionality.
+            </li>
+            <li>
+              Developed desktop applications with JavaFX, enhancing application
+              interfaces and user interaction features.
+            </li>
+            <li>
+              Managed all aspects of the software development lifecycle (SDLC),
+              including planning, design, development, testing, and deployment.
+            </li>
+            <li>
+              Collaborated with clients to understand their requirements and
+              delivered solutions that met their business needs.
+            </li>
+            <li>
+              Adhered to best practices in coding and development to ensure
+              high-quality software solutions and maintenance ease.
+            </li>
+          </ul>
+        </div>
+
+        <div className="w-11/12 bg-gray-100 p-4 mt-6 rounded-lg shadow-md">
+          <div className="flex justify-between items-center mb-4">
+            <div className="flex items-center bg-black text-orange-500 rounded-lg px-3 py-1">
+              <h3 className="text-lg font-bold text-orange-500">
+                Enghouse networks internship
+              </h3>
+            </div>
+            <p className="bg-black text-orange-500 rounded-lg px-3 py-1 text-sm">
+              Jun 2023 – August
+            </p>
+          </div>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              Gained hands-on experience with CentOS OS, enhancing skills in
+              Linux-based system management and operations.
+            </li>
+            <li>
+              Learned to configure and manage MariaDB databases, focusing on
+              optimizing performance and ensuring data security.
+            </li>
+            <li>
+              Acquired practical knowledge in the setup and administration of
+              CentOS environments, leading to improved system reliability.
+            </li>
+            <li>
+              Trained under experienced database administrators, gaining
+              insights into best practices in database management and system
+              maintenance.
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="flex flex-col items-center">
+      <Skills />
       </div>
-    </main>
+      <div className="w-full mt-8 py-4 bg-gray-800 text-white text-center">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold">Contact Me</h2>
+          <p className="mt-2">Email: <a href="mailto:jeanpaulHaddad123@hotmail.com" className="text-indigo-400">jeanpaulHaddad123@hotmail.com</a></p>
+          <p>Phone: <a href="tel:+1234567890" className="text-indigo-400">+961 70506227</a></p>
+        </div>
+    </div>
   );
 }
